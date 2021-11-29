@@ -1,3 +1,7 @@
+# Name: Bao Ngo
+# SOS Project
+# I use the code in this link for reference https://www.geeksforgeeks.org/tic-tac-toe-game-with-gui-using-tkinter-in-python/
+
 from tkinter import *
 from tkinter import messagebox
 from functools import partial
@@ -483,8 +487,8 @@ for i in range(board_size):
     for j in range(board_size):
         n = j
         button[i].append(j)
-        get_t = partial(get_text, i, j)
-        button[i][j] = Button(BoardFrame, bg="white", command=get_t, height=4, width=9, highlightbackground="white",
+        text = partial(get_text, i, j)
+        button[i][j] = Button(BoardFrame, bg="white", command=text, height=4, width=9, highlightbackground="white",
                               highlightthickness=0)
         button[i][j].grid(row=m, column=n)
 
