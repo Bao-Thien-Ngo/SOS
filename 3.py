@@ -394,7 +394,9 @@ def get_text(i, j):
                 turn = 'Blue'
                 Label(root, font=('Times New Roman', 18), text="Current turn: Blue").place(x=450, y=750)
             else:
-                values = ["S", "O"]
+                d = "S"
+                c = "O"
+                values = [d, c]
                 board[i][j] = random.choice(values)
                 turn = 'Red'
                 Label(root, font=('Times New Roman', 18), text="Current turn: Red").place(x=450, y=750)
@@ -414,7 +416,9 @@ def get_text(i, j):
                 turn = 'Red'
                 Label(root, font=('Times New Roman', 18), text="Current turn: Red").place(x=450, y=750)
             else:
-                values = ["S", "O"]
+                d = "S"
+                c = "O"
+                values = [d, c]
                 board[i][j] = random.choice(values)
                 turn = 'Blue'
                 Label(root, font=('Times New Roman', 18), text="Current turn: Blue").place(x=450, y=750)
