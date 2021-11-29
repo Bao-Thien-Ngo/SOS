@@ -385,8 +385,6 @@ def get_text(i, j):
 
     if Mode_1.get() == 'Human' and Mode_2.get() == 'Computer':
         if board[i][j] == ' ':
-            print(sign)
-            print(turn)
             if sign % 2 == 0:
                 board[i][j] = BlueSOS.get()
                 turn = 'Blue'
@@ -404,7 +402,7 @@ def get_text(i, j):
         if (x):
             if sign % 2 != 0:
                 move = RedComputer()
-                print(move)
+                #print(move)
                 button[move[0]][move[1]].config(state=DISABLED)
                 get_text(move[0], move[1])
     if Mode_1.get() == 'Computer' and Mode_2.get() == 'Human':
@@ -426,7 +424,7 @@ def get_text(i, j):
         if (x):
             if sign % 2 != 0:
                 move = BlueComputer()
-                print(move)
+                #print(move)
                 button[move[0]][move[1]].config(state=DISABLED)
                 get_text(move[0], move[1])
     if Mode_1.get() == 'Computer' and Mode_2.get() == 'Computer':
@@ -463,8 +461,6 @@ def get_text(i, j):
         if turn == "Red" and winner(board, 'S', 'O'):
             box = messagebox.showinfo("Red player wins the game", "Red Player win the games")
     elif GameMode.get() == 'General Game':
-        print(BlueScore)
-        print(RedScore)
         if isfull():
             if BlueScore == RedScore:
                 box = messagebox.showinfo("Tie Game", "Tie Game")
